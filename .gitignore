@@ -42,3 +42,6 @@ pgdata/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Prisma generated client
+backend/src/generated/
