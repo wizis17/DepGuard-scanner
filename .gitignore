@@ -17,6 +17,8 @@ out/
 # User-uploaded dependency files and generated reports
 uploads/
 reports/
+# ...but keep the daily/weekly progress reports (practicum evidence)
+!docs/reports/
 
 # Logs
 logs/

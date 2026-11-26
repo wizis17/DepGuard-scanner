@@ -15,7 +15,7 @@ The project is at the end of Week 3. The design (3.1–3.3) and parser prototype
 | Final submission | Week 16, due Feb 26, 2027 |
 | Already done | Proposal (PDF); backend, Docker PostgreSQL, Prisma migration, CI (PR #1); report templates (PR #2); parser prototype and system design in guide (`feature/3.4-parser-prototype`) |
 | Blockers | Supervisor approval and official report format not yet confirmed (1.1–1.3) |
-| Latest reports | `docs/reports/weekly/P20-Weekly-W03-2026-11-27.md`; daily reports in `docs/reports/daily/` |
+| Latest reports | Weekly: [W03](reports/weekly/P20-Weekly-W03-2026-11-27.md) · Daily: [24 Nov](reports/daily/P20-Daily-2026-11-24.md), [25 Nov](reports/daily/P20-Daily-2026-11-25.md), [26 Nov](reports/daily/P20-Daily-2026-11-26.md) · All: [daily/](reports/daily/), [weekly/](reports/weekly/) |
 
 Status key: **Not started** → **In progress** → **Done**; use **Blocked** when waiting on someone, **Skipped** for optional items dropped from scope.
 
