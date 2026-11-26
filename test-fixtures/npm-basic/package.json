@@ -1,0 +1,13 @@
+{
+  "name": "fixture-npm-basic",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DepGuard test fixture: one known-vulnerable direct dependency, one transitive dependency, one scoped dev dependency.",
+  "dependencies": {
+    "debug": "2.6.9",
+    "lodash": "4.17.20"
+  },
+  "devDependencies": {
+    "@types/ms": "0.7.34"
+  }
+}
