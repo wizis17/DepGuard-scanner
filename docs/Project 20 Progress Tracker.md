@@ -1,20 +1,21 @@
 # Project 20 Progress Tracker
 
-Nov 6, 2026 ·&#32;
+Created Nov 6, 2026 · Updated Nov 26, 2026
 
 ## Where the project stands
 
-The project is at Week 1, step 1: confirm scope and requirements with the supervisor. Update this table every Friday together with the weekly report.
+The project is at the end of Week 3. The design (3.1–3.3) and parser prototype (3.4) are done and waiting to merge, and most of Week 4's setup was finished early. Update this table every Friday together with the weekly report.
 
 | Item | Now |
 | --- | --- |
-| Current week | Week 1 of 16 (week 1 assumed to start Mon 9 Nov 2026) |
+| Current week | Week 3 of 16 (23–27 Nov); week 1 started Mon 9 Nov 2026 |
 | Current phase | Phase 1 — Research and design |
-| Current step | 1.1 Get the official proposal and report format from the supervisor |
-| Next milestone | Approved problem and scope, due Nov 13, 2026 |
+| Current step | 4.1 UI wireframes, then 4.2 frontend setup (also catching up on 1.1–1.3, 2.2, 2.3) |
+| Next milestone | Initial application (week 4), due Dec 4, 2026; tag `v0.1-design` |
 | Final submission | Week 16, due Feb 26, 2027 |
-| Already done | Project guide reviewed; flow diagrams and clickable prototype demo built |
-| Blockers | None yet |
+| Already done | Proposal (PDF); backend, Docker PostgreSQL, Prisma migration, CI (PR #1); report templates (PR #2); parser prototype and system design in guide (`feature/3.4-parser-prototype`) |
+| Blockers | Supervisor approval and official report format not yet confirmed (1.1–1.3) |
+| Latest reports | `docs/reports/weekly/P20-Weekly-W03-2026-11-27.md`; daily reports in `docs/reports/daily/` |
 
 Status key: **Not started** → **In progress** → **Done**; use **Blocked** when waiting on someone, **Skipped** for optional items dropped from scope.
 
@@ -24,10 +25,10 @@ One row per roadmap week; change Status as work moves and paste the proof (commi
 
 | Week | Dates (2026–27) | Phase | Deliverable | Status | Evidence |
 | --- | --- | --- | --- | --- | --- |
-| 1 | 9–13 Nov | Research and design | Approved problem and scope | In progress |  |
-| 2 | 16–20 Nov | Research and design | Proposal draft and literature review | Not started |  |
-| 3 | 23–27 Nov | Research and design | Design document (architecture, ERD, UML, workflow) | Not started |  |
-| 4 | 30 Nov–4 Dec | Research and design | Wireframes, project setup, database migrations | Not started |  |
+| 1 | 9–13 Nov | Research and design | Approved problem and scope | In progress | Waiting for supervisor confirmation (1.1–1.3) |
+| 2 | 16–20 Nov | Research and design | Proposal draft and literature review | In progress | Proposal done: `docs/DepGuard Scanner — Project Proposal.pdf` (`ccae893`); requirements list and literature review not yet drafted |
+| 3 | 23–27 Nov | Research and design | Design document (architecture, ERD, UML, workflow) | Done | Guide §5, §9, §10, §15, Appendix A (`fe51f1c`); parser prototype (`4511366`); waiting to merge |
+| 4 | 30 Nov–4 Dec | Research and design | Wireframes, project setup, database migrations | In progress | Backend, Prisma migration, Docker, CI: PR #1. To do: wireframes, frontend |
 | 5 | 7–11 Dec | Core build | Working login and authorization | Not started |  |
 | 6 | 14–18 Dec | Core build | Project management and file upload | Not started |  |
 | 7 | 21–25 Dec | Core build | npm manifest and lockfile parser | Not started |  |
@@ -53,17 +54,17 @@ Tick each step when its evidence exists; the first unticked step is your current
 - [ ] 1.2 Confirm the topic is accepted as a software engineering / security project
 - [ ] 1.3 Agree on npm-only MVP and OSV as the data source
 - [ ] 1.4 Research SCA concepts and vulnerability databases (OSV, NVD, GitHub Advisory, OWASP Dependency-Check)
-- [ ] 2.1 Write one-page proposal: problem, objectives, scope, method, expected output
-- [ ] 2.2 List functional and non-functional requirements and use cases
-- [ ] 2.3 Draft literature review comparing existing tools
-- [ ] 3.1 Draw use-case diagram and activity diagram
-- [ ] 3.2 Draw system architecture and ERD
-- [ ] 3.3 Define REST API endpoints and scan status values
-- [ ] 3.4 Build a tiny parser prototype and test it on a real `package-lock.json`
+- [x] 2.1 Write one-page proposal: problem, objectives, scope, method, expected output — proposal PDF, `ccae893`
+- [ ] 2.2 List functional and non-functional requirements and use cases — use cases done (guide §5); requirements list still to do
+- [ ] 2.3 Draft literature review comparing existing tools — tool comparison table in the proposal; draft still to do
+- [x] 3.1 Draw use-case diagram and activity diagram — guide §5 and §9, `fe51f1c`
+- [x] 3.2 Draw system architecture and ERD — guide §8 and §10, `fe51f1c`
+- [x] 3.3 Define REST API endpoints and scan status values — guide §15 and §10, `fe51f1c`
+- [x] 3.4 Build a tiny parser prototype and test it on a real `package-lock.json` — `backend/src/modules/parser`, `4511366`, 13 tests
 - [ ] 4.1 Create UI wireframes (login, projects, upload, dashboard, finding detail, report)
-- [ ] 4.2 Set up repo: React + TypeScript, Express + TypeScript, Tailwind
-- [ ] 4.3 Set up PostgreSQL, Prisma schema and first migration
-- [ ] 4.4 Add Docker Compose for local development
+- [ ] 4.2 Set up repo: React + TypeScript, Express + TypeScript, Tailwind — backend done (PR #1); frontend still to do
+- [x] 4.3 Set up PostgreSQL, Prisma schema and first migration — PR #1, migration `20261124131355_init`
+- [x] 4.4 Add Docker Compose for local development — PR #1, `docker-compose.yml`
 
 ### Phase 2 — Core build (weeks 5–11)
 
@@ -73,10 +74,10 @@ Tick each step when its evidence exists; the first unticked step is your current
 - [ ] 6.1 Project CRUD (API and UI)
 - [ ] 6.2 File upload: .json only, 5 MB limit, defensive JSON parse
 - [ ] 6.3 Clear validation error messages for wrong or malformed files
-- [ ] 7.1 Parse lockfile v2/v3 `packages` section (names and exact versions)
-- [ ] 7.2 Mark direct vs transitive using root dependencies
+- [ ] 7.1 Parse lockfile v2/v3 `packages` section (names and exact versions) — mostly done in the 3.4 prototype; connect to upload in week 7
+- [ ] 7.2 Mark direct vs transitive using root dependencies — done in the 3.4 prototype; review in week 7
 - [ ] 7.3 Support lockfile v1 `dependencies` tree
-- [ ] 8.1 Unit tests for parser edge cases (scoped names, links, missing versions, dev deps)
+- [ ] 8.1 Unit tests for parser edge cases (scoped names, links, missing versions, dev deps) — covered by the 3.4 prototype tests; extend in week 8
 - [ ] 8.2 Cross-check package.json against lockfile and warn if out of date
 - [ ] 9.1 OSV `querybatch` client with chunking, 10 s timeout, retry with backoff
 - [ ] 9.2 Fetch full advisory records from `/v1/vulns/{id}` and cache them
